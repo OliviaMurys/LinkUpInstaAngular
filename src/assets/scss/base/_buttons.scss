@@ -1,0 +1,14 @@
+.btns{
+  color: black;
+  border: none;
+  border-radius: 0;
+  background-color: white;
+  padding: 0;
+  box-shadow: none;
+
+}
+.btns.focus, .btns:focus {
+  outline: 0;
+  box-shadow: none;
+  background: white;
+}

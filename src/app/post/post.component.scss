@@ -1,0 +1,126 @@
+.person-img {
+  margin: 5px 6px;
+  img {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.post-header, .left-block {
+  margin: 0;
+}
+
+.user-info {
+  align-self: center;
+}
+
+.user-name {
+  font: 10px QanelasMedium, sans-serif;
+  margin: 0;
+}
+
+.user-location {
+  font: 10px QanelasLight, sans-serif;
+  margin: 0;
+}
+
+.edit-btn {
+  display: grid;
+  padding: 0;
+  background: transparent;
+  margin-right: 6px;
+  height: 20px;
+  align-self: center;
+  span {
+    width: 3px;
+    height: 3px;
+    background-color: grey;
+    margin: 0;
+    border-radius: 50%;
+  }
+}
+
+.num-of-looks {
+  font: 10px QanelasMedium, sans-serif;
+  margin: 0;
+}
+
+.tags p {
+  margin: 0;
+  color: blue;
+  font: 10px QanelasLight, sans-serif;
+  &:before {
+    content: "#";
+
+  }
+}
+
+.user-post-tittle {
+  font: 10px QanelasLight, sans-serif;
+  margin: 5px 0;
+  .user-name {
+    margin-right: 5px;
+  }
+}
+
+.all-comments {
+  font: 10px QanelasLight, sans-serif;
+  color: silver;
+  cursor: pointer;
+}
+
+.post-item{
+  margin-bottom: 15px;
+}
+.comments {
+  &.opened-comments {
+    p {
+      margin: 5px 0;
+      height: unset;
+      transition: .2s linear;
+      opacity: 1;
+    }
+  }
+  p {
+    font: 10px QanelasLight, sans-serif;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+
+  span {
+    margin-right: 10px;
+  }
+}
+
+.modal-block {
+  display: none;
+  width: 280px;
+  margin: auto;
+  height: 400px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+}
+
+.modal-list {
+  margin: auto;
+  background: white;
+  padding: 10px;
+  border-radius:5px;
+  a{
+    font: 12px QanelasLight, sans-serif;
+  }
+}
+.post-photo{
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  display: flex;
+}
+.right-btns{
+  margin-right: 10px;
+}

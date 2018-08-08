@@ -1,0 +1,31 @@
+.icons {
+  display: inline-block;
+  position: relative;
+}
+
+.likeIcon {
+  width: 16px;
+  height: 16px;
+  background: url(assets/images/like.png) no-repeat;
+  margin-right: 15px;
+}
+
+.commentIcon {
+  width: 16px;
+  height: 16px;
+  background: url(assets/images/comment.png) no-repeat;
+  margin-right: 15px;
+}
+
+.sendIcon {
+  width: 16px;
+  height: 16px;
+  background: url(assets/images/fly.png) no-repeat;
+  margin-right: 15px;
+}
+
+.saveIcon {
+  width: 16px;
+  height: 16px;
+  background: url(assets/images/bookmark.png) no-repeat;
+}

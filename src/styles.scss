@@ -1,0 +1,36 @@
+@import "assets/scss/base/module";
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.row{
+   margin-right: 0!important;
+   margin-left: 0!important;
+  margin-bottom: 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ECECEC;
+}
+
+*:focus {
+  outline: none;
+}
+
+a:hover, a {
+  color: black!important;
+  text-decoration: none!important;
+}
+
+.row:after {
+  content: none;
+}
