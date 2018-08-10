@@ -1,43 +1,44 @@
-<div class="post-item" data-id="{{post.postId}}">
+<div class="post-item" *ngFor="let post of postService.posts">
     <div class="post-header row justify-content-between">
-        <div class="left-block row">
+        <div class="left-block row" routerLink='/profile'>
             <div class="person-img">
-                <img [src]="post.userImage" alt="user1">
+                <img [src]="post.avatar" alt="user1">
             </div>
             <div class="user-info">
                 <p class="user-name">{{post.userName}}</p>
-                <p class="user-location">{{post.userLocation}}</p>
+                <p class="user-location">{{post.createdAt}}</p>
             </div>
         </div>
         <div class="right-block d-flex">
-            <a href="#" class="btns edit-btn" (click)="opendrop()">
+            <a href="#" class="btns edit-btn" (click)="opendrop(post.id)">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
-            <div class="modal-block" id="dropdown-content" (click)="closedrop()">
-                <ul class='modal-list'>
-                    <li><a href="#">Видалити пост</a></li>
-                    <li><a href="#">Поширити в Messenger</a></li>
-                    <li><a href="#">Не стежити</a></li>
-                </ul>
-            </div>
         </div>
     </div>
     <div class="post-photo">
-        <img [src]="post.postImage" class="w-100" alt="post1">
+        <img [src]="post.imageUrl" class="w-100" alt="post{{id}}">
     </div>
     <div class="post-actions row justify-content-between">
         <div>
-            <button class="btns right-btns" (click)="setLike()"><i class="material-icons">favorite_border</i></button>
-            <button class="btns right-btns"><i class="material-icons">chat_bubble_outline</i></button>
-            <button class="btns right-btns"><i class="material-icons">near_me</i></button>
+            <button class="btns right-btns" (click)="setLike(post.id, post.likes)">
+                <i class="material-icons">favorite_border</i>
+            </button>
+            <button class="btns right-btns">
+                <i class="material-icons">chat_bubble_outline</i>
+            </button>
+            <button class="btns right-btns">
+                <i class="material-icons">near_me</i>
+            </button>
         </div>
-        <button class="btns"><i class="material-icons">turned_in_not</i>
+        <button class="btns">
+            <i class="material-icons">turned_in_not</i>
         </button>
     </div>
-    <p class="num-of-looks">{{post.numOfLooks}} вподобань</p>
-    <p class="user-post-tittle"><span class="user-name">{{post.userName}}</span>{{post.postTittle}}</p>
+    <p class="num-of-looks">{{post.likes}} вподобань</p>
+    <p class="user-post-tittle">
+        <span class="user-name">{{post.userName}}</span>{{post.postTittle}}</p>
     <div class="tags row">
         <p>kc</p>
         <p>kuyjhc</p>
@@ -45,12 +46,28 @@
         <p>kgfhc</p>
     </div>
     <div class="comments">
-        <p class="single-comment"><span class="user-name">Murys Olya</span>hdzjxhfd kshfdmcxn</p>
-        <p class="single-comment"><span class="user-name">Murys Olya</span>hdzjxhfd kshfdmcxn</p>
-        <p class="single-comment"><span class="user-name">Murys Olya</span>hdzjxhfd kshfdmcxn</p>
-        <button class="btns all-comments p-0" id="all-comments"
-                (click)="showAllComments($event)">
+        <p class="single-comment">
+            <span class="user-name">Murys Olya</span>hdzjxhfd kshfdmcxn</p>
+        <p class="single-comment">
+            <span class="user-name">Murys Olya</span>hdzjxhfd kshfdmcxn</p>
+        <p class="single-comment">
+            <span class="user-name">Murys Olya</span>hdzjxhfd kshfdmcxn</p>
+        <button class="btns all-comments p-0" id="all-comments" (click)="showAllComments($event)">
             Переглянути всі коментарі(3)
         </button>
     </div>
+</div>
+
+<div class="modal-block" *ngIf="activePostId" (click)="deletePost(activePostId)">
+    <ul class='modal-list'>
+        <li>
+            <a href="#">Видалити пост</a>
+        </li>
+        <li>
+            <a href="#">Поширити в Messenger</a>
+        </li>
+        <li>
+            <a href="#">Не стежити</a>
+        </li>
+    </ul>
 </div>

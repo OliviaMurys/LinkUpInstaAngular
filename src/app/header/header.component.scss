@@ -1,8 +1,9 @@
-header{
-  //background: linear-gradient(to bottom left,$orange,$pink 82%);
-   h1{
-    font: 18px QanelasMedium, sans-serif;
-    color: white;
+@import "../../assets/scss/base/color";
+
+.header-block{
+  background: linear-gradient(to bottom left,$orange, $pink 100%);
+  a{
+    color: white!important;
     margin: 0;
   }
 }

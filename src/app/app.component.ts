@@ -7,15 +7,4 @@ import {PostService} from './post/post.service';
     styleUrls: ['./app.component.scss'],
     providers: [PostService]
 })
-export class AppComponent {
-    posts = [];
-
-    constructor(private postService: PostService) {
-    }
-
-    ngOnInit() {
-        this.postService.getPosts().subscribe(post => {
-            console.warn(post);
-        });
-    }
-}
+export class AppComponent {}

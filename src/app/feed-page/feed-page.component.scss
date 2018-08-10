@@ -1,0 +1,18 @@
+section.main-phone-section {
+    display: flex;
+    & .phone-block {
+      align-self: center;
+      height: 400px;
+      background-size: 25%;
+      margin: auto;
+      overflow-y: scroll;
+    }
+    & .phone-content {
+      width: 280px;;
+      background: white;
+    //  height: 100%;
+      //overflow: hidden;
+      position: relative;
+      margin: auto;
+    }
+  }

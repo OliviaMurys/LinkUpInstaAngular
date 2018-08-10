@@ -1,42 +1,18 @@
-import {Component, Input} from '@angular/core';
-import {PostService} from './post.service';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { PostService } from './post.service';
+import { HttpResponse } from 'selenium-webdriver/http';
 
 @Component({
     selector: 'app-post',
     templateUrl: './post.component.html',
     styleUrls: ['./post.component.scss'],
 })
-export interface Post {
-    heroesUrl: string;
-    textfile: string;
-}
+
 export class PostComponent {
+    public activePostId: number;
+
     constructor(private postService: PostService) {
     }
-
-  //  @Input() post;
-    //
-    // constructor() {
-    // }
-    post: Post;
-
-    showPosts() {
-        this.postService.getPosts();
-            // .subscribe((data: Post) => this.post = {
-            //     heroesUrl: data['heroesUrl'],
-            //     textfile: data['textfile']
-            // });
-    }
-
-    // showPosts() {
-    //     this.postService.getPosts()
-    //         .subscribe((data: Post) => this.post = {
-    //             heroesUrl: data['heroesUrl'],
-    //             textfile:  data['textfile']
-    //         });
-    // }
-
-
     public showAllComments(event: any): void {
         const parent = event.target.parentElement;
         const btn = event.target;
@@ -46,21 +22,27 @@ export class PostComponent {
         }
     }
 
-    public opendrop() {
-        document.getElementById('dropdown-content').style.display = 'flex';
+    public opendrop(postId: number) {
+        this.activePostId = postId;
     }
 
     public closedrop() {
-        document.getElementById('dropdown-content').style.display = 'none';
+        this.activePostId = null;
     }
 
-    // public deletepost() {
-    //     document.getElementById('daleteModal').style.display = 'block';
-    // }
+    public deletePost(id) {
+        this.postService.deletePost(id).subscribe(res => {});
+    }
 
-    // public setLike() {
-    //     const parent = event.target.parentElement;
-    //
-    //     document.getElementById('dropdown-content').style.display = 'flex';
-    // }
+    public setLike(id, like) {
+        this.postService.setLike(id, like).subscribe(res => {
+            console.log('like added');
+        });
+    }
+    // getTotalScroll() {
+    //     let ElemScrollTop = this.contentEl.nativeElement.scrollTop.subscribe();
+    //     console.warn(ElemScrollTop);
+    //   }
+
 }
+
