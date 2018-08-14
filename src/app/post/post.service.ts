@@ -39,9 +39,11 @@ export class PostService {
             like: like+1,
              };
         like+=1;
-        // console.warn(like)
         return this.http.post(`${this.postUrl}/${id}/like`, obj);
     }
+    // addPost(){
+    //      return this.http.post(this.postUrl, post);
+    // }
 
 }
 

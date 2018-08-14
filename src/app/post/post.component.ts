@@ -14,6 +14,7 @@ export class PostComponent {
     constructor(private postService: PostService) {
     }
     public showAllComments(event: any): void {
+        console.warn('dshkcj')
         const parent = event.target.parentElement;
         const btn = event.target;
         btn.style.display = 'none';
@@ -31,7 +32,7 @@ export class PostComponent {
     }
 
     public deletePost(id) {
-        this.postService.deletePost(id).subscribe(res => {});
+        this.postService.deletePost(id).subscribe(res => { });
     }
 
     public setLike(id, like) {
@@ -39,6 +40,18 @@ export class PostComponent {
             console.log('like added');
         });
     }
+    // public addPost() {
+    //     // this.postService.addPost(date, postFile, name, avatar).subscribe(post =>{
+    //     //     this.postService.posts.push(post);
+    //     //     console.warn('dodano')
+    //     // })
+    //     //let file: any = btoa((<HTMLInputElement>event.target).files[0]);
+    //     let file = (<HTMLInputElement>event.target).files[0];
+    //     console.warn(file)
+    //   //  let normalizeFile = btoa(file.toString);
+    // }
+
+
     // getTotalScroll() {
     //     let ElemScrollTop = this.contentEl.nativeElement.scrollTop.subscribe();
     //     console.warn(ElemScrollTop);

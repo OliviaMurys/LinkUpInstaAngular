@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef,HostListener } from '@angular/core';
 import { PostService } from '../post/post.service';
-
+import{RouteService} from  '../shared/services/route.service'
 @Component({
   selector: 'app-feed-page',
   templateUrl: './feed-page.component.html',

@@ -1,6 +1,8 @@
-<form>
-  <div class="input" aria-placeholder='created At'></div>
-  <div class="input" aria-placeholder='image'></div>
-  <div class="input" aria-placeholder='user Name'></div>
-  <div class="input" aria-placeholder='avata'></div>
+<form class="add-post-form">
+  <input type="file" placeholder='image' multiple (change)="onFileUpload($event)">
+  <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img [src]="slide" alt="" width="100%">
+      </div>
+  </ngx-slick>
 </form>

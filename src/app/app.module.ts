@@ -10,9 +10,13 @@ import {PostComponent} from './post/post.component';
 import { FeedPageComponent } from './feed-page/feed-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { FooterComponent } from './footer/footer.component';
+import { SlickModule } from 'ngx-slick';
+
 const routes=[
-    {path: '', component: FeedPageComponent},
-    {path: 'profile', component: ProfilePageComponent},
+    {path: '', component: PhoneComponent},
+    // {path: 'profile', component: ProfilePageComponent},
+    // {path: 'newPost', component: PhoneComponent},
 ]
 @NgModule({
     declarations: [
@@ -23,12 +27,15 @@ const routes=[
         FeedPageComponent,
         ProfilePageComponent,
         AddPostComponent,
+        FooterComponent,
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        FormsModule,
+        SlickModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]

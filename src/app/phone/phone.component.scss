@@ -1,78 +1,22 @@
-//section.main-phone-section {
-//  & .person-img {
-//    margin: 5px 6px;
-//    & img {
-//      border-radius: 50%;
-//      width: 25px;
-//      height: 25px;
-//    }
-//  }
-//  & .user-info {
-//    align-self: center;
-//  }
-//  & .user-name {
-//    font: 10px QanelasMedium, sans-serif;
-//    margin: 0;
-//  }
-//  & .user-location {
-//    font: 10px QanelasLight, sans-serif;
-//    margin: 0;
-//  }
-//  & .edit-btn {
-//    display: grid;
-//    padding: 0;
-//    background: transparent;
-//    margin-right: 6px;
-//    & span {
-//      width: 3px;
-//      height: 3px;
-//      background-color: grey;
-//      margin: 3px 0;
-//      border-radius: 50%;
-//    }
-//  }
-//  & .num-of-looks {
-//    font: 10px QanelasMedium, sans-serif;
-//    margin: 0;
-//  }
-//  & .tags p {
-//    margin: 0;
-//    color: blue;
-//    font: 10px QanelasLight, sans-serif;
-//    &:before {
-//      content: "#";
-//
-//    }
-//  }
-//  & .user-post-tittle {
-//    font: 10px QanelasLight, sans-serif;
-//    margin: 5px 0;
-//    & .user-name {
-//      margin-right: 5px;
-//    }
-//  }
-//  & .all-comments {
-//    font: 10px QanelasLight, sans-serif;
-//    color: silver;
-//  }
-//  & .post-item{
-//    padding-bottom: 15px;
-//  }
-//  & .comments {
-//    & p {
-//      font: 10px QanelasLight, sans-serif;
-//      height: 0;
-//      opacity: 0;
-//      margin: 0;
-//    }
-//    & .opened-comments {
-//      margin: 5px 0;
-//      height: unset;
-//      transition: .2s linear;
-//      opacity: 1;
-//    }
-//    & span {
-//      margin-right: 10px;
-//    }
-//  }
-//}
+section.main-phone-section {
+    display: flex;
+    min-height: calc(100vh - 64px);
+    & .container{
+      display: flex;
+    }
+    & .phone-block {
+      align-self: center;
+      margin: auto;
+      overflow-y: scroll;
+      background: url(/assets/images/iphone.png)no-repeat;
+      width: 370px;
+      height: 720px;
+    }
+    & .phone-content {
+      width: 335px;
+      background: white;
+      position: relative;
+      margin: 75px auto;
+      z-index: -1;
+    }
+  }

@@ -1,11 +1,11 @@
-<!--<section class="main-phone-section">-->
-    <!--<div class="phone-block">-->
-        <!--<div class="phone-content">-->
-            <!--&lt;!&ndash;<div class="insta-header">&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="content">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div class="stories"></div>&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
+<section class="main-phone-section">
+    <div class="container">
+        <div class="phone-block" id="phone-block">
+            <div class="phone-content" id="phone-content" #phoneContent (scroll)="onScroll()">
+                <app-feed-page></app-feed-page>
+                <app-add-post *ngIf="isActive"></app-add-post>
+            </div>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</section>
