@@ -4,8 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RouteService {
+  public activePage: string = 'feed';
   constructor() { }
-  feedVisible: boolean = true;
-  profileVisible: boolean = false;
-  addVisible: boolean = false
+  public goToPage(label: string) {
+    this.activePage = label;
+  }
 }

@@ -1,6 +1,5 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component} from '@angular/core';
 import { PostService } from './post.service';
-import { HttpResponse } from 'selenium-webdriver/http';
 
 @Component({
     selector: 'app-post',
@@ -10,11 +9,9 @@ import { HttpResponse } from 'selenium-webdriver/http';
 
 export class PostComponent {
     public activePostId: number;
-
     constructor(private postService: PostService) {
     }
     public showAllComments(event: any): void {
-        console.warn('dshkcj')
         const parent = event.target.parentElement;
         const btn = event.target;
         btn.style.display = 'none';
@@ -40,22 +37,16 @@ export class PostComponent {
             console.log('like added');
         });
     }
-    // public addPost() {
-    //     // this.postService.addPost(date, postFile, name, avatar).subscribe(post =>{
-    //     //     this.postService.posts.push(post);
-    //     //     console.warn('dodano')
-    //     // })
-    //     //let file: any = btoa((<HTMLInputElement>event.target).files[0]);
-    //     let file = (<HTMLInputElement>event.target).files[0];
-    //     console.warn(file)
-    //   //  let normalizeFile = btoa(file.toString);
-    // }
-
-
-    // getTotalScroll() {
-    //     let ElemScrollTop = this.contentEl.nativeElement.scrollTop.subscribe();
-    //     console.warn(ElemScrollTop);
-    //   }
-
+    public addPost() {
+       // let filess = this.AddPostComponent
+        // this.postService.addPost(date, postFile, name, avatar).subscribe(post =>{
+        //     this.postService.posts.push(post);
+        //     console.warn('dodano')
+        // })
+        //let file: any = btoa((<HTMLInputElement>event.target).files[0]);
+      //  let file = (<HTMLInputElement>event.target).files[0];
+      //  console.warn(file)
+      //  let normalizeFile = btoa(file.toString);
+    }
 }
 

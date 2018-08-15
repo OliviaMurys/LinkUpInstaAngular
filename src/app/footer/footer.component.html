@@ -1,17 +1,17 @@
 <div class="footer-block row">
-  <a (click)="feedVisible()">
+  <span (click)="service.goToPage('feed')">
     <i class="material-icons">home</i>
-  </a>
-  <a>
+  </span>
+  <span>
     <i class="material-icons">search</i>
-  </a>
-  <a (click)="addVisible()">
+  </span>
+  <span (click)="service.goToPage('add-post')">
     <i class="material-icons">add</i>
-  </a>
-  <a>
+  </span>
+  <span>
     <i class="material-icons">favorite_border</i>
-  </a>
-  <a (click)="profileVisible()">
+  </span>
+  <span (click)="service.goToPage('profile')">
     <i class="material-icons">person_outline</i>
-  </a>
+  </span>
 </div>

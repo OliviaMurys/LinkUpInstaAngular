@@ -7,16 +7,15 @@ section.main-phone-section {
     & .phone-block {
       align-self: center;
       margin: auto;
-      overflow-y: scroll;
+      overflow-y: hidden;
       background: url(/assets/images/iphone.png)no-repeat;
       width: 370px;
       height: 720px;
+      padding: 65px 15px;
     }
     & .phone-content {
-      width: 335px;
-      background: white;
-      position: relative;
-      margin: 75px auto;
-      z-index: -1;
+      width: 340px;
+      overflow-y: scroll;
+      height: 600px;
     }
   }

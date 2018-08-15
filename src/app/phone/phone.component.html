@@ -1,12 +1,12 @@
 <section class="main-phone-section">
     <div class="container">
         <div class="phone-block" id="phone-block">
-            <div class="phone-content" id="phone-content" #phoneContent (scroll)="onScroll()">
-                <app-feed-page *ngIf="this.service.feedVisible == true"></app-feed-page>
-                <app-add-post *ngIf="this.service.addVisible == true"></app-add-post>
-                <app-profile-page *ngIf="this.service.profileVisible == true"></app-profile-page>
+                <div class="phone-content" id="phone-content" #phoneContent >
+                    <app-feed-page *ngIf="this.service.activePage == 'feed'" (scroll)="onScroll()"></app-feed-page>
+                    <app-add-post *ngIf="this.service.activePage == 'add-post'"></app-add-post>
+                    <app-profile-page *ngIf="this.service.activePage == 'profile'"></app-profile-page>
+                </div>
+                <app-footer></app-footer>
             </div>
-            <app-footer></app-footer>
-        </div>
     </div>
 </section>
