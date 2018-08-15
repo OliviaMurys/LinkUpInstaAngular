@@ -2,8 +2,9 @@
     <div class="container">
         <div class="phone-block" id="phone-block">
             <div class="phone-content" id="phone-content" #phoneContent (scroll)="onScroll()">
-                <app-feed-page></app-feed-page>
-                <app-add-post *ngIf="isActive"></app-add-post>
+                <app-feed-page *ngIf="this.service.feedVisible == true"></app-feed-page>
+                <app-add-post *ngIf="this.service.addVisible == true"></app-add-post>
+                <app-profile-page *ngIf="this.service.profileVisible == true"></app-profile-page>
             </div>
             <app-footer></app-footer>
         </div>

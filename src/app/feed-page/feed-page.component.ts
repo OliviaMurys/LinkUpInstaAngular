@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef,HostListener } from '@angular/core';
 import { PostService } from '../post/post.service';
-import{RouteService} from  '../shared/services/route.service'
+
 @Component({
   selector: 'app-feed-page',
   templateUrl: './feed-page.component.html',
@@ -10,7 +10,7 @@ import{RouteService} from  '../shared/services/route.service'
 export class FeedPageComponent implements OnInit {
   @HostListener('window:scroll', [])
   @ViewChild('phoneContent') contentEl: ElementRef;
-  constructor(private postService: PostService) { }
+  constructor(public postService: PostService) { }
   ngOnInit() {
   }
   getElHeight() {

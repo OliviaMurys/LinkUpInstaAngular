@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '../../../node_modules/@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import{RouteService} from  '../shared/services/route.service'
 
 @Component({
   selector: 'app-add-post',
@@ -8,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-post.component.scss']
 })
 export class AddPostComponent implements OnInit {
+  constructor(public service: RouteService) { }
   @ViewChild('uploadedImg') imgEl: ElementRef;
   slides = [];
   slideConfig = {

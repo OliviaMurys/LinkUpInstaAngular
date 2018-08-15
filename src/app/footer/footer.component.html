@@ -1,17 +1,17 @@
 <div class="footer-block row">
-  <a routerLink='/'>
+  <a (click)="feedVisible()">
     <i class="material-icons">home</i>
   </a>
-  <a href="search">
+  <a>
     <i class="material-icons">search</i>
   </a>
-  <a routerLink='/newPost'>
+  <a (click)="addVisible()">
     <i class="material-icons">add</i>
   </a>
-  <a href="#liked">
+  <a>
     <i class="material-icons">favorite_border</i>
   </a>
-  <a href="#profile" routerLink='/profile'>
+  <a (click)="profileVisible()">
     <i class="material-icons">person_outline</i>
   </a>
 </div>

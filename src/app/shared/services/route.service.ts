@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class RouteService {
   constructor() { }
-  isVisible: boolean = false;
+  feedVisible: boolean = true;
+  profileVisible: boolean = false;
+  addVisible: boolean = false
 }
