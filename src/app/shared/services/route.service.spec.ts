@@ -8,7 +8,7 @@ describe('RouteService', () => {
     });
   });
 
-  it('should be created', inject([RouteService], (service: RouteService) => {
-    expect(service).toBeTruthy();
+  it('should be created', inject([RouteService], (routeService: RouteService) => {
+    expect(routeService).toBeTruthy();
   }));
 });

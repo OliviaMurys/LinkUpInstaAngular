@@ -1,11 +1,10 @@
-import { Injectable } from '@angular/core';
-
+import { Injectable } from "@angular/core";
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class RouteService {
-  public activePage: string = 'feed';
-  constructor() { }
+  public activePage: string = "feed";
+  constructor() {}
   public goToPage(label: string) {
     this.activePage = label;
   }

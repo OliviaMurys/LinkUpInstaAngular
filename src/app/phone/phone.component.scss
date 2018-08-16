@@ -1,21 +1,21 @@
 section.main-phone-section {
+  display: flex;
+  min-height: calc(100vh - 64px);
+  & .container {
     display: flex;
-    min-height: calc(100vh - 64px);
-    & .container{
-      display: flex;
-    }
-    & .phone-block {
-      align-self: center;
-      margin: auto;
-      overflow-y: hidden;
-      background: url(/assets/images/iphone.png)no-repeat;
-      width: 370px;
-      height: 720px;
-      padding: 65px 15px;
-    }
-    & .phone-content {
-      width: 340px;
-      overflow-y: scroll;
-      height: 600px;
-    }
   }
+  & .phone-block {
+    align-self: center;
+    margin: auto;
+    overflow-y: hidden;
+    background: url(/assets/images/iphone.png) no-repeat;
+    width: 370px;
+    height: 720px;
+    padding: 65px 15px;
+  }
+  & .phone-content {
+    width: 340px;
+    overflow-y: scroll;
+    height: 600px;
+  }
+}

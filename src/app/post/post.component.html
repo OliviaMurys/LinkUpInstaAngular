@@ -18,9 +18,9 @@
         </div>
     </div>
     <ngx-slick *ngIf="post.imageUrls && post.imageUrls.length" class="carousel" #slickModal="slick-modal" [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let image of post.imageUrls" class="slide post-photo"> 
+        <div ngxSlickItem *ngFor="let image of post.imageUrls" class="slide post-photo">
             <img [src]="image" class="w-100" alt="post{{id}}">
-        </div> 
+        </div>
     </ngx-slick>
     <div class="post-photo" *ngIf="post.imageUrl">
         <img [src]="post.imageUrl" class="w-100" alt="post{{id}}">

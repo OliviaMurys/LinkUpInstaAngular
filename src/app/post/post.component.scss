@@ -7,7 +7,8 @@
   }
 }
 
-.post-header, .left-block {
+.post-header,
+.left-block {
   margin: 0;
 }
 
@@ -52,7 +53,6 @@
   font: 10px QanelasLight, sans-serif;
   &:before {
     content: "#";
-
   }
 }
 
@@ -70,15 +70,16 @@
   cursor: pointer;
 }
 
-.post-item{
+.post-item {
   margin-bottom: 15px;
 }
+
 .comments {
   &.opened-comments {
     p {
       margin: 5px 0;
       height: unset;
-      transition: .2s linear;
+      transition: 0.2s linear;
       opacity: 1;
     }
   }
@@ -88,7 +89,6 @@
     opacity: 0;
     margin: 0;
   }
-
   span {
     margin-right: 10px;
   }
@@ -111,25 +111,29 @@
   margin: auto;
   background: white;
   padding: 10px;
-  border-radius:5px;
+  border-radius: 5px;
   width: fit-content;
   align-self: center;
-  a{
+  a {
     font: 12px QanelasLight, sans-serif;
   }
 }
-.post-photo{
+
+.post-photo {
   width: 100%;
   height: 335px;
   margin-bottom: 5px;
 }
-.right-btns{
+
+.right-btns {
   margin-right: 10px;
 }
+
 .slick-slide img {
   object-fit: cover;
 }
-.carousel{
+
+.carousel {
   height: fit-content;
   margin-bottom: 10px;
 }

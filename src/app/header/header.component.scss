@@ -1,9 +1,8 @@
 @import "../../assets/scss/base/color";
-
-.header-block{
-  background: linear-gradient(to bottom left,$orange, $pink 100%);
-  a{
-    color: white!important;
+.header-block {
+  background: linear-gradient(to bottom left, $orange, $pink 100%);
+  a {
+    color: white !important;
     margin: 0;
   }
 }
